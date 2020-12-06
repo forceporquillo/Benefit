@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="30dp"
+    android:layout_gravity="top|center"
+    app:cardBackgroundColor="#FFBDBD"
+    android:layout_margin="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/workout_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:padding="10dp"
+            android:shadowColor="#8C333232"
+            android:shadowDx="2"
+            android:shadowDy="3"
+            android:text="Burpees"
+            android:shadowRadius="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/squada_one_regular"
+            android:textSize="35sp" />
+
+        <TextView
+            android:text="@string/benefit_is_an_application_than_can_help_you_stay_fit_by_providing_multiple_but_simple_exercises"
+            android:layout_below="@id/workout_title"
+            android:id="@+id/description_message"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:padding="10dp"
+            android:shadowColor="#8C333232"
+            android:shadowDx="2"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/squada_one_regular"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="40dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="match_parent"
+    android:background="#D1B1EA"
+    tools:context=".main_menu.workout.WorkoutFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/benefit_card_top"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@id/back_button_container"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#59FFFFFF"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/squada_one_regular"
+                android:shadowColor="#8C333232"
+                android:shadowDx="2"
+                android:shadowDy="10"
+                android:shadowRadius="5"
+                android:text="@string/benefit"
+                android:textColor="@color/white"
+                android:textSize="80sp" />
+
+            <TextView
+                android:id="@+id/workout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/squada_one_regular"
+                android:padding="4dp"
+                android:shadowColor="#8C333232"
+                android:shadowDx="2"
+                android:shadowDy="10"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/app_title"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/img_calf_raises" />
+
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/workout_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/squada_one_regular"
+                android:shadowColor="#8C333232"
+                android:shadowDx="2"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:ellipsize="end"
+                android:lineSpacingExtra="1dp"
+                android:layout_centerHorizontal="true"
+                android:maxLines="2"
+                android:layout_below="@id/workout_name"
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/squada_one_regular"
+                android:shadowColor="#8C333232"
+                android:shadowDx="1.3"
+                android:shadowDy="2"
+                android:text="@string/benefit_is_an_application_than_can_help_you_stay_fit_by_providing_multiple_but_simple_exercises"
+                android:shadowRadius="3"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="25dp"
+                android:layout_below="@id/description"
+                android:id="@+id/floating_bar"
+                android:layout_margin="5dp"
+                android:elevation="0dp"
+                app:fabSize="normal"
+                app:fabCustomSize="25dp"
+                app:pressedTranslationZ="1dp"
+                app:borderWidth="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow"
+                app:tint="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_height="25dp"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/timer_category"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/floating_bar"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/squada_one_regular"
+                android:padding="5dp"
+                android:shadowColor="#8C333232"
+                android:shadowDx="2"
+                android:shadowDy="5"
+                android:text="60 Seconds"
+                android:shadowRadius="5"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/start_container"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="#59985CB5"
+                app:cardCornerRadius="360dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="@string/start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/squada_one_regular"
+                    android:padding="14dp"
+                    android:shadowColor="#8C333232"
+                    android:shadowDx="2"
+                    android:shadowDy="5"
+                    android:shadowRadius="2"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/countdown_container"
+                android:layout_width="170dp"
+                app:cardBackgroundColor="#EDDDFB"
+                android:layout_height="170dp"
+                android:layout_below="@id/workout_name"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:id="@+id/countdown_timer"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:shadowRadius="10"
+                    android:shadowDy="1.7"
+                    android:shadowDx="1.1"
+                    android:shadowColor="#8C333232"
+                    android:fontFamily="@font/squada_one_regular"
+                    android:textColor="@color/white"
+                    android:textSize="115sp"/>
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/check"
+                    android:background="@drawable/ic_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/back_button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="#59FFFFFF"
+        app:cardCornerRadius="360dp"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/squada_one_regular"
+            android:paddingStart="50dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="50dp"
+            android:paddingBottom="10dp"
+            android:shadowColor="#8C333232"
+            android:shadowDx="1.3"
+            android:shadowDy="1.6"
+            android:shadowRadius="5"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

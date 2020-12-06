@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:background="#FFEFEF"
+    android:layout_gravity="center_vertical"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_shape"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-50dp"
+        android:layout_marginEnd="-150dp"
+        android:layout_marginBottom="-116dp"
+        android:background="@drawable/circle_shape" />
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/app_title"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BENEFIT"
+            android:shadowColor="#8C333232"
+            android:shadowDx="2"
+            android:shadowDy="10"
+            android:shadowRadius="5"
+            android:fontFamily="@font/squada_one_regular"
+            android:textSize="80sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/username_textView"
+            android:shadowColor="#8C333232"
+            android:shadowDx="2"
+            android:shadowDy="1.6"
+            android:shadowRadius="1"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/squada_one_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"/>
+
+        <com.google.android.material.card.MaterialCardView
+            app:strokeWidth="1dp"
+            app:strokeColor="#ff0000"
+            app:cardCornerRadius="0dp"
+            android:id="@+id/username_inputText"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/username_textView"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <EditText
+                android:inputType="text"
+                android:maxLines="1"
+                android:id="@+id/username_editText"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_gravity="center"
+            android:id="@+id/signInButton"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:text="@string/sign_in"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="10dp"
+            android:textSize="22sp"
+            app:strokeColor="#ff0000"
+            app:strokeWidth="1dp"
+            android:shadowColor="#8C333232"
+            android:shadowDx="2"
+            android:shadowDy="6"
+            android:shadowRadius="5"
+            android:fontFamily="@font/squada_one_regular"
+            android:textColor="@color/white"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/white"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/splash_container"
+        android:background="#E5C0DF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/title_name"
+            android:id="@+id/animationView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:lottie_rawRes="@raw/barbell_animation"
+            app:lottie_autoPlay="true" />
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/title_name"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/benefit"
+            android:textSize="100sp"
+            android:shadowColor="#C254E0"
+            android:shadowDx="5"
+            android:shadowDy="0"
+            android:shadowRadius="1"
+            android:textColor="@color/black"
+            android:fontFamily="@font/squada_one_regular"/>
+    </RelativeLayout>
+</RelativeLayout>

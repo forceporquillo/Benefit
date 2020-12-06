@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="30dp"
+    android:layout_gravity="top|center"
+    app:cardBackgroundColor="#FFBDBD"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/benefit"
+            android:shadowColor="#8C333232"
+            android:shadowDx="2"
+            android:shadowDy="10"
+            android:shadowRadius="5"
+            android:fontFamily="@font/squada_one_regular"
+            android:textSize="80sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:padding="5dp"
+            android:shadowColor="#8C333232"
+            android:shadowDx="2"
+            android:shadowDy="5"
+            android:shadowRadius="8"
+            android:layout_below="@id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/squada_one_regular"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/benefit_is_an_application_than_can_help_you_stay_fit_by_providing_multiple_but_simple_exercises"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

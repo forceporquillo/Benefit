@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Benefit</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="benefit">BENEFIT</string>
+    <string name="what_do_you_want_to_improve_on">What do you want to improve on?</string>
+    <string name="lower_body">Lower Body</string>
+    <string name="log_ins">Log-Ins</string>
+    <string name="hey">Hey!, \u0020</string>
+    <string name="benefit_is_an_application_than_can_help_you_stay_fit_by_providing_multiple_but_simple_exercises">Benefit is an application than can help you stay fit by providing multiple but simple exercises.</string>
+    <string name="sign_in">Sign-In</string>
+    <string name="username">Username:</string>
+    <string name="back">Back</string>
+    <string name="start">Start!</string>
+</resources>
