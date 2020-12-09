@@ -13,14 +13,14 @@ import com.jeem.benefit.exercise.main_menu.MainMenuActivity;
 
 import static com.jeem.benefit.exercise.main_menu.MainMenuActivity.USERNAME;
 import static com.jeem.benefit.exercise.sharedpreferences.PersistenceManager.storeUser;
-import static com.jeem.benefit.exercise.sharedpreferences.PersistenceManager.storeUserTest;
 import static com.jeem.benefit.exercise.utilities.BenefitComponents.ViewAnimator.showSplashScreen;
 
 public class SignInActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_in_activity);
+        setContentView(R.layout.activity_sign_in);
 
         final EditText usernameET = findViewById(R.id.username_editText);
         final Button signInButton = findViewById(R.id.signInButton);
@@ -41,7 +41,7 @@ public class SignInActivity extends AppCompatActivity {
         }
 
         navigateToMainMenu(username);
-        writeToSharedPrefs(username);
+        storeUser(this, username);
     }
 
     private void navigateToMainMenu(final String username) {
@@ -50,9 +50,5 @@ public class SignInActivity extends AppCompatActivity {
         overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         startActivity(intent);
         finish();
-    }
-
-    private void writeToSharedPrefs(String username) {
-        storeUserTest(this, username);
     }
 }
