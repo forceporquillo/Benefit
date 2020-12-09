@@ -18,6 +18,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static com.jeem.benefit.exercise.utilities.BenefitComponents.CalendarHelper.getDate;
+import static com.jeem.benefit.exercise.utilities.BenefitComponents.PersistenceManager.saveToSharedPref;
 import static com.jeem.benefit.exercise.utilities.BenefitComponents.Utils.formatName;
 
 public class PersistenceManager {
@@ -37,11 +38,6 @@ public class PersistenceManager {
         list = gson.fromJson(userList, userListType);
 
         return list;
-    }
-
-    public static void storeUser(Context ctx, String username) {
-        User user = new User(username, getDate());
-        addInJSONArray(ctx, user);
     }
 
     private static List<User> getUserDataFromSharedPref(Context ctx) {
@@ -84,41 +80,41 @@ public class PersistenceManager {
         return ctx.getPackageName() + "." + PREFERENCE_KEY_SUFFIX;
     }
 
-    public static void storeUserTest(final Context ctx, final String user) {
-        preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
-        SharedPreferences.Editor editor = preferences.edit();
-
-        final Gson gson = new Gson();
-        final String username = formatName(user);
-        List<User> userList = getUsers(ctx);
-
-        if (userList != null) {
-            userList.add(new User(username, getDate()));
-        } else {
-            userList = Collections.singletonList(new User(username, getDate()));
-        }
-
-        final String serializeObject = gson.toJson(userList);
-        editor.putString(hashCode(ctx), serializeObject).apply();
+    public static void storeUser(Context ctx, String username) {
+        saveToSharedPref(ctx, username);
     }
 
-    public static List<User> getUsers(Context ctx) {
-        preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
-
-        List<User> userList;
-
-        String listUsers = preferences.getString(hashCode(ctx), null);
-
-        if (listUsers != null) {
-            Gson gson = new Gson();
-            Type userType = new TypeToken<List<User>>() {
-            }.getType();
-
-            userList = gson.fromJson(listUsers, userType);
-            return userList;
-        }
-
-        return null;
-    }
+//    private static void saveToSharedPref(final Context ctx, final String user) {
+//        preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
+//        SharedPreferences.Editor editor = preferences.edit();
+//
+//        final Gson gson = new Gson();
+//        final String username = formatName(user);
+//        List<User> userList = getUsers(ctx);
+//
+//        if (userList != null) {
+//            userList.add(new User(username, getDate()));
+//        } else {
+//            userList = Collections.singletonList(new User(username, getDate()));
+//        }
+//
+//        final String serializeObject = gson.toJson(userList);
+//        editor.putString(hashCode(ctx), serializeObject).apply();
+//    }
+//
+//    public static List<User> getUsers(Context ctx) {
+//        preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
+//
+//        String listUsers = preferences.getString(hashCode(ctx), null);
+//
+//        if (listUsers != null) {
+//            Gson gson = new Gson();
+//            Type userType = new TypeToken<List<User>>() {
+//            }.getType();
+//
+//            return gson.fromJson(listUsers, userType);
+//        }
+//        return null;
+//    }
 
 }
